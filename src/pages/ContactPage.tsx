@@ -10,9 +10,9 @@ const ContactPage: React.FC = () => {
 
   useEffect(() => {
     updatePageSEO({
-      title: 'Contact Us - PrimeEvents | Get In Touch for Your Next Event',
-      description: 'Contact PrimeEvents for your event management needs. Located in Mumbai, we serve clients across India with corporate events, product launches, and brand experiences.',
-      keywords: 'contact PrimeEvents, event management contact, mumbai events, corporate event planning contact',
+      title: 'Contact Us - PrimXP | Get In Touch for Your Next Event',
+      description: 'Contact PrimXP for your event management needs. Located in Mumbai, we serve clients across India with corporate events, product launches, and brand experiences.',
+      keywords: 'contact primxp, event management contact, mumbai events, corporate event planning contact',
       url: 'https://www.primxp.com/contact'
     });
   }, []);
@@ -78,11 +78,11 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-[#2d545e] mb-2">Our Office</h3>
                     <p className="text-gray-600">
-                      R-220, NH-4<br />
-                      Adarsh Colony, NIT<br />
-                      Faridabad 121001<br />
+                      123 Business Plaza<br />
+                      Andheri East, Mumbai<br />
+                      Maharashtra 400069<br />
                       India
-                    </p>  
+                    </p>
                   </div>
                 </div>
 
@@ -93,8 +93,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-[#2d545e] mb-2">Call Us</h3>
                     <p className="text-gray-600">
-                      +91 95993 18090<br />
-                      +91 95993 18090
+                      +91 98765 43210<br />
+                      +91 98765 43211
                     </p>
                   </div>
                 </div>
@@ -106,8 +106,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-[#2d545e] mb-2">Email Us</h3>
                     <p className="text-gray-600">
-                      Pawan@primxp.com<br />
-                      creative@primxp.com
+                      info@primxp.com<br />
+                      sales@primxp.com
                     </p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-600 text-sm mb-3">
                   For ongoing events and emergencies, our team is available around the clock.
                 </p>
-                <p className="text-[#e1b382] font-semibold">+91 95993 18090</p>
+                <p className="text-[#e1b382] font-semibold">+91 98765 43299</p>
               </div>
             </motion.div>
 
@@ -307,18 +307,39 @@ const ContactPage: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="rounded-2xl overflow-hidden shadow-2xl"
           >
-            {/* Placeholder for Google Maps */}
-            <div className="w-full h-96 bg-gradient-to-br from-[#2d545e] to-[#12343b] flex items-center justify-center">
-              <div className="text-white text-center">
-                <MapPin className="w-16 h-16 mx-auto mb-4 text-[#e1b382]" />
-                <h3 className="text-xl font-bold mb-2">Interactive Map</h3>
-                <p className="text-white/80">
-                  123 Business Plaza, Andheri East<br />
-                  Mumbai, Maharashtra 400069
+            {/* Google Maps Embed */}
+            <div className="w-full h-96 relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8658087757!2d72.8526315!3d19.1197592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c676018b43%3A0x75f29d7f0b0c5c8e!2sAndheri%20East%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="PrimXP Office Location - Andheri East, Mumbai"
+                className="w-full h-full"
+              />
+              
+              {/* Overlay with company info */}
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-xs">
+                <div className="flex items-center mb-2">
+                  <MapPin className="w-5 h-5 text-[#e1b382] mr-2" />
+                  <h3 className="font-bold text-[#2d545e]">PrimXP Office</h3>
+                </div>
+                <p className="text-sm text-gray-600 mb-3">
+                  123 Business Plaza<br />
+                  Andheri East, Mumbai<br />
+                  Maharashtra 400069
                 </p>
-                <button className="mt-4 bg-[#e1b382] hover:bg-[#c89666] text-white px-6 py-2 rounded-lg transition-colors">
+                <a
+                  href="https://maps.google.com/?q=Andheri+East+Mumbai+Maharashtra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#e1b382] hover:bg-[#c89666] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
                   Get Directions
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>

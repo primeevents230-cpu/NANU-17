@@ -7,10 +7,14 @@ import TestimonialsSection from '../components/Home/TestimonialsSection';
 import NewsletterSection from '../components/Home/NewsletterSection';
 import { updatePageSEO } from '../utils/seo';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  onQuickContact: () => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ onQuickContact }) => {
   useEffect(() => {
     updatePageSEO({
-      title: 'PrimeEvents - Premium Event Management & Brand Experiences',
+      title: 'PrimXP - Premium Event Management & Brand Experiences',
       description: 'Leading event management company specializing in corporate events, product launches, retail branding, and team meetings. Creating unforgettable experiences with professional execution.',
       keywords: 'event management, corporate events, product launch, retail branding, team meetings, event planning, brand experiences',
       url: 'https://www.primxp.com'
@@ -19,7 +23,7 @@ const HomePage: React.FC = () => {
 
   return (
     <main>
-      <HeroSection />
+      <HeroSection onQuickContact={onQuickContact} />
       <StatsSection />
       <RecentWorkSection />
       <ClientsSection />

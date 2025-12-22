@@ -37,6 +37,18 @@ export interface RecentWork {
   client_name?: string;
   project_date?: string;
   is_featured: boolean;
+  gallery_images?: string[];
+  detailed_description?: string;
+  project_overview?: string;
+  challenges?: string;
+  solutions?: string;
+  results?: string;
+  video_url?: string;
+  project_duration?: string;
+  team_size?: number;
+  budget_range?: string;
+  technologies_used?: string[];
+  client_testimonial?: string;
 }
 
 export interface Client {

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Target, Heart, Users, MapPin, Phone, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useSupabaseData } from '../hooks/useSupabaseData';
 import { TeamMember, InHouseService } from '../lib/supabase';
 import { updatePageSEO } from '../utils/seo';
 
 const AboutPage: React.FC = () => {
+  const navigate = useNavigate();
   const { data: teamMembers, loading: teamLoading } = useSupabaseData<TeamMember>('team_members', {
     filter: { is_active: true },
     orderBy: 'display_order',
@@ -20,9 +22,9 @@ const AboutPage: React.FC = () => {
 
   useEffect(() => {
     updatePageSEO({
-      title: 'About Us - PrimeEvents | Our Story, Team & Capabilities',
-      description: 'Learn about PrimeEvents\'s journey, meet our expert team, and discover our in-house capabilities including stage design, lighting, sound, printing, and corporate gifting.',
-      keywords: 'about PrimeEvents, event management team, company story, in-house services, stage design, lighting, sound systems',
+      title: 'About Us - PrimXP | Our Story, Team & Capabilities',
+      description: 'Learn about PrimXP\'s journey, meet our expert team, and discover our in-house capabilities including stage design, lighting, sound, printing, and corporate gifting.',
+      keywords: 'about primxp, event management team, company story, in-house services, stage design, lighting, sound systems',
       url: 'https://www.primxp.com/about'
     });
   }, []);
@@ -43,7 +45,7 @@ const AboutPage: React.FC = () => {
                 Our Story
               </h1>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Founded in 2025, PrimeEvents began with a simple vision: to create unforgettable experiences 
+                Founded in 2015, PrimXP began with a simple vision: to create unforgettable experiences 
                 that leave lasting impressions. What started as a small team of passionate event professionals 
                 has grown into a leading event management company trusted by brands across the industry.
               </p>
@@ -142,8 +144,25 @@ const AboutPage: React.FC = () => {
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
                 >
                   <div className="bg-[#e1b382]/10 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#e1b382]/20 transition-colors">
-                    {/* Icon placeholder - you can add icon mapping here */}
-                    <div className="w-8 h-8 bg-[#e1b382] rounded" />
+                    <img
+                      src={`https://images.pexels.com/photos/${
+                        service.title.toLowerCase().includes('stage') ? '1190298' :
+                        service.title.toLowerCase().includes('light') ? '2747449' :
+                        service.title.toLowerCase().includes('sound') ? '1708936' :
+                        service.title.toLowerCase().includes('print') ? '2608517' :
+                        service.title.toLowerCase().includes('gift') ? '1395967' :
+                        '2833037'
+                      }/pexels-photo-${
+                        service.title.toLowerCase().includes('stage') ? '1190298' :
+                        service.title.toLowerCase().includes('light') ? '2747449' :
+                        service.title.toLowerCase().includes('sound') ? '1708936' :
+                        service.title.toLowerCase().includes('print') ? '2608517' :
+                        service.title.toLowerCase().includes('gift') ? '1395967' :
+                        '2833037'
+                      }.jpeg`}
+                      alt={service.title}
+                      className="w-full h-full object-cover rounded"
+                    />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-[#2d545e] group-hover:text-[#e1b382] transition-colors">
                     {service.title}
@@ -300,7 +319,10 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
             
-            <button className="bg-[#e1b382] hover:bg-[#c89666] text-white px-8 py-4 rounded-lg font-medium transition-colors">
+            <button 
+              onClick={() => navigate('/contact')}
+              className="bg-[#e1b382] hover:bg-[#c89666] text-white px-8 py-4 rounded-lg font-medium transition-colors"
+            >
               Start Your Project
             </button>
           </motion.div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, User } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useSupabaseData } from '../../hooks/useSupabaseData';
 import { RecentWork } from '../../lib/supabase';
 
 const RecentWorkSection: React.FC = () => {
+  const navigate = useNavigate();
   const { data: recentWork, loading } = useSupabaseData<RecentWork>('recent_work', {
     filter: { is_featured: true },
     orderBy: 'created_at',
@@ -118,7 +120,10 @@ const RecentWorkSection: React.FC = () => {
                   )}
                 </div>
 
-                <button className="flex items-center space-x-2 text-[#e1b382] hover:text-[#c89666] font-medium group-hover:translate-x-1 transition-transform">
+                <button 
+                  onClick={() => navigate(`/project/${work.id}`)}
+                  className="flex items-center space-x-2 text-[#e1b382] hover:text-[#c89666] font-medium group-hover:translate-x-1 transition-transform"
+                >
                   <span>View Details</span>
                   <ArrowRight size={16} />
                 </button>
@@ -133,7 +138,10 @@ const RecentWorkSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <button className="bg-[#2d545e] hover:bg-[#12343b] text-white px-8 py-4 rounded-lg font-medium transition-colors inline-flex items-center space-x-2">
+          <button 
+            onClick={() => navigate('/gallery')}
+            className="bg-[#2d545e] hover:bg-[#12343b] text-white px-8 py-4 rounded-lg font-medium transition-colors inline-flex items-center space-x-2"
+          >
             <span>View All Projects</span>
             <ArrowRight size={20} />
           </button>
