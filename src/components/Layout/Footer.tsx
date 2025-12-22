@@ -58,21 +58,21 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-[#e1b382]">Our Services</h3>
             <nav className="space-y-2">
-              <a href="#" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
+              <Link to="/services/corporate-events" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
                 Corporate Events
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
+              </Link>
+              <Link to="/services/team-meetings" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
                 Team Meetings
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
+              </Link>
+              <Link to="/services/product-launches" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
                 Product Launches
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
+              </Link>
+              <Link to="/services/retail-branding" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
                 Retail Branding
-              </a>
-              <a href="#" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
+              </Link>
+              <Link to="/services/event-production" className="block text-gray-300 hover:text-[#e1b382] transition-colors">
                 Event Production
-              </a>
+              </Link>
             </nav>
           </div>
 
