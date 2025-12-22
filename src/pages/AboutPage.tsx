@@ -94,7 +94,7 @@ const AboutPage: React.FC = () => {
                 className="rounded-2xl shadow-2xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-[#e1b382] p-6 rounded-xl text-white">
-                <h4 className="font-bold text-2xl mb-2">10+ Years</h4>
+                <h4 className="font-bold text-2xl mb-2">7+ Years</h4>
                 <p className="text-sm">of Excellence in Event Management</p>
               </div>
             </motion.div>
