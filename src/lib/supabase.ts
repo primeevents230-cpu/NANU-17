@@ -108,6 +108,16 @@ export interface GalleryImage {
   category?: string;
   tags?: string[];
   is_featured: boolean;
+  project_image_1?: string;
+  project_image_2?: string;
+  project_image_3?: string;
+  project_image_4?: string;
+  project_image_5?: string;
+  project_image_6?: string;
+  project_image_7?: string;
+  project_image_8?: string;
+  project_image_9?: string;
+  project_image_10?: string;
 }
 
 // Form submission interfaces
