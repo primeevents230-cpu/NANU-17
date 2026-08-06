@@ -78,9 +78,9 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-[#2d545e] mb-2">Our Office</h3>
                     <p className="text-gray-600">
-                      F-56, G.Floor, K.No-890,<br />
-                      Village Fatehpur Beri,<br />
-                      New Delhi 110074<br />
+                      123 Business Plaza<br />
+                      Andheri East, Mumbai<br />
+                      Maharashtra 400069<br />
                       India
                     </p>
                   </div>
@@ -93,8 +93,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-[#2d545e] mb-2">Call Us</h3>
                     <p className="text-gray-600">
-                      +91 95993 18090<br />
-                      +91 95993 18090
+                      +91 98765 43210<br />
+                      +91 98765 43211
                     </p>
                   </div>
                 </div>
@@ -106,8 +106,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-[#2d545e] mb-2">Email Us</h3>
                     <p className="text-gray-600">
-                      pawan@primxp.com<br />
-                      creatives@primxp.com
+                      info@primxp.com<br />
+                      sales@primxp.com
                     </p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-600 text-sm mb-3">
                   For ongoing events and emergencies, our team is available around the clock.
                 </p>
-                <p className="text-[#e1b382] font-semibold">+91 95993 18090</p>
+                <p className="text-[#e1b382] font-semibold">+91 98765 43299</p>
               </div>
             </motion.div>
 
